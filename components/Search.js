@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 30,
     marginTop: 20,
     alignItems: 'center',
-    paddingLeft: 15,
+    paddingHorizontal: 15,
   },
   input: {flex: 1},
 });
