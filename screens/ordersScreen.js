@@ -18,9 +18,11 @@ export default function ordersScreen() {
         <Slider />
 
         {SliderData.map((item) => (
-          <Card order={item} key={item.id} selected={selectedCard} 
-          expand={()=>setSelectedCard(item.id)}
-          
+          <Card
+            order={item}
+            key={item.id}
+            selected={selectedCard}
+            expand={() => setSelectedCard(item.id)}
           />
         ))}
       </ScrollView>
@@ -32,7 +34,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 20,
-    backgroundColor: '#ededed',
+    backgroundColor: '#F6F6F7',
   },
   order: {
     flexDirection: 'row',
@@ -40,5 +42,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
     paddingBottom: 15,
   },
-  title: {fontSize: 24, fontWeight: '600'},
+  title: {fontSize: 24, fontWeight: 'bold'},
 });

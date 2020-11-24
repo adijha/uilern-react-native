@@ -1,17 +1,16 @@
 import React from 'react';
-import {StyleSheet, Text, View,TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import IoniconsI from 'react-native-vector-icons/Ionicons';
-export default function Card({order, selected,expand}) {
+export default function Card({order, selected, expand}) {
   return (
     <View style={styles.container} key={order.id}>
       <View style={styles.title}>
         <Text style={{fontWeight: 'bold'}}>
           {order.id}, <Text style={styles.date}>{order.date}</Text>
         </Text>
-<TouchableOpacity onPress={()=>expand()}  >
-
-        <IoniconsI name="chevron-down" size={20} color="gray" />
-</TouchableOpacity>
+        <TouchableOpacity onPress={() => expand()}>
+          <IoniconsI name="chevron-down" size={20} color="gray" />
+        </TouchableOpacity>
       </View>
 
       <View style={styles.amountWrap}>
@@ -60,7 +59,7 @@ const styles = StyleSheet.create({
   content: {
     fontSize: 13,
   },
-  amount: {marginLeft: 7, color: 'green', fontWeight: 'bold'},
+  amount: {marginLeft: 7, color: '#00C860', fontWeight: 'bold'},
   amountWrap: {flexDirection: 'row', marginTop: 5},
   date: {color: 'gray', fontWeight: 'normal'},
 });

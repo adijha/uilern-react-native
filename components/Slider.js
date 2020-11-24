@@ -20,7 +20,7 @@ export default function Slider() {
       <Item
         item={item}
         onPress={() => setSelectedId(item)}
-        style={item === selectedId && {backgroundColor: 'orange'}}
+        style={item === selectedId && {backgroundColor: '#FF9600'}}
         textStyle={item === selectedId && styles.sliderSelectedText}
       />
     );
@@ -48,9 +48,10 @@ export default function Slider() {
 const styles = StyleSheet.create({
   item: {
     borderRadius: 20,
-    paddingHorizontal: 10,
+    paddingHorizontal: 15,
     justifyContent: 'center',
-    height: 40,
+    height: 35,
+    marginHorizontal: 8,
   },
   sliderText: {fontSize: 15, color: 'gray'},
   sliderSelectedText: {color: '#fff', fontWeight: '700'},

@@ -1,8 +1,12 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import OrdersScreen from './screens/ordersScreen';
+import {NavigationContainer} from '@react-navigation/native';
 
-const App = () => {
-  return <OrdersScreen />;
-};
-
-export default App;
+export default function App() {
+  return (
+    <NavigationContainer>
+      <OrdersScreen />
+    </NavigationContainer>
+  );
+}
