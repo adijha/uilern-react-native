@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, TouchableOpacity, FlatList} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, FlatList, View} from 'react-native';
 
 export default function Slider() {
   const sliderContent = [
@@ -27,22 +27,30 @@ export default function Slider() {
   };
 
   return (
-    <FlatList
-      style={{marginTop: 20}}
-      data={sliderContent}
-      renderItem={renderItem}
-      keyExtractor={(item) => item}
-      horizontal
-    />
+    <View
+      style={{
+        height: 70,
+      }}>
+      <FlatList
+        style={{
+          marginTop: 20,
+        }}
+        showsHorizontalScrollIndicator={false}
+        data={sliderContent}
+        renderItem={renderItem}
+        keyExtractor={(item) => item}
+        horizontal
+      />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   item: {
-    height: 40,
     borderRadius: 20,
     paddingHorizontal: 10,
     justifyContent: 'center',
+    height: 40,
   },
   sliderText: {fontSize: 15, color: 'gray'},
   sliderSelectedText: {color: '#fff', fontWeight: '700'},
